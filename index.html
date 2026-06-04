@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pure Compass Investments | Where Legacy Meets Direction</title>
-  <meta name="description" content="Pure Compass Investments provides integrity-first real estate advisory and representation for first-generation wealth builders, diaspora investors, and relocating professionals in Central Florida." />
+  <meta name="description" content="Pure Compass Investments is an integrity-first real estate and investor advisory ecosystem serving first-generation wealth builders, diaspora investors, and communities historically excluded from structured wealth-building pathways. Anchored in Central Florida, expanding into Georgia." />
 
   <!-- Google Fonts: Cormorant Garamond + Jost -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +16,7 @@
     :root {
       --green:        #0e3b28;
       --green-mid:    #174d35;
+      --green-light:  #1e6040;
       --silver:       #a6a7a5;
       --silver-light: #c8c9c7;
       --cream:        #f7f4eb;
@@ -92,7 +93,7 @@
       color: var(--silver-light);
       text-transform: uppercase;
     }
-    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
       font-family: var(--sans);
       font-size: 0.72rem;
@@ -277,7 +278,7 @@
       margin-top: 1.5rem;
     }
     .stat-block .stat-number {
-      font-family: 'Jost', 'Helvetica Neue', sans-serif;
+      font-family: var(--sans);
       font-size: 3.2rem;
       font-weight: 300;
       color: #ffffff;
@@ -323,7 +324,7 @@
     .photo-break-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(14, 59, 40, 0.45);
+      background: rgba(14, 59, 40, 0.52);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -335,12 +336,12 @@
       font-style: italic;
       color: var(--white);
       text-align: center;
-      max-width: 700px;
+      max-width: 760px;
       padding: 0 2rem;
       line-height: 1.4;
     }
 
-    /* ─── FRAMEWORK ──────────────────────────────────────────── */
+    /* ─── TRUE NORTH FRAMEWORK ───────────────────────────────── */
     #framework {
       background: var(--green);
       padding: 7rem 2.5rem;
@@ -360,13 +361,13 @@
     .framework-header p {
       font-size: 0.95rem;
       color: var(--silver-light);
-      max-width: 560px;
+      max-width: 600px;
       margin: 0 auto;
       line-height: 1.85;
     }
     .steps {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 3px;
       margin-bottom: 4rem;
     }
@@ -375,7 +376,7 @@
       padding: 3rem 2.25rem;
     }
     .step-number {
-      font-family: 'Jost', 'Helvetica Neue', sans-serif;
+      font-family: var(--sans);
       font-size: 3.5rem;
       font-weight: 200;
       color: rgba(200, 201, 199, 0.65);
@@ -409,7 +410,6 @@
       width: 100%;
       height: 340px;
       overflow: hidden;
-      border-radius: 0;
     }
     .framework-photo img {
       width: 100%;
@@ -420,9 +420,103 @@
       mix-blend-mode: luminosity;
     }
 
+    /* ─── FIVE-PILLAR ECOSYSTEM ──────────────────────────────── */
+    #ecosystem {
+      background: var(--white);
+      padding: 7rem 2.5rem;
+    }
+    .ecosystem-inner { max-width: var(--max-w); margin: 0 auto; }
+    .ecosystem-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    .ecosystem-header-left h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 400;
+      color: var(--green);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    .ecosystem-header-right p {
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      line-height: 1.9;
+      margin-bottom: 1.25rem;
+    }
+    .ecosystem-header-right p:last-child { margin-bottom: 0; }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 3px;
+    }
+    .pillar-card {
+      background: var(--cream);
+      padding: 2.5rem 1.75rem;
+      border-top: 3px solid var(--green);
+      display: flex;
+      flex-direction: column;
+    }
+    .pillar-card:hover {
+      background: var(--cream-dark);
+    }
+    .pillar-num {
+      font-family: var(--sans);
+      font-size: 2.8rem;
+      font-weight: 200;
+      color: rgba(14,59,40,0.18);
+      line-height: 1;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+    .pillar-card h3 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--green);
+      margin-bottom: 0.85rem;
+      line-height: 1.25;
+    }
+    .pillar-card p {
+      font-size: 0.85rem;
+      color: var(--charcoal);
+      line-height: 1.85;
+      flex: 1;
+    }
+    .pillar-card .pillar-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green);
+      border-bottom: 1px solid var(--green);
+      padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
+    .pillar-card .pillar-link:hover { opacity: 0.65; }
+    .ecosystem-note {
+      margin-top: 3.5rem;
+      padding: 2rem 2.5rem;
+      border-left: 3px solid var(--green);
+      background: var(--cream);
+    }
+    .ecosystem-note p {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--green);
+      line-height: 1.75;
+    }
+
     /* ─── WHO WE SERVE ───────────────────────────────────────── */
     #serve {
-      background: var(--white);
+      background: var(--cream);
       padding: 7rem 2.5rem;
     }
     .serve-inner { max-width: var(--max-w); margin: 0 auto; }
@@ -479,7 +573,7 @@
 
     /* ─── WHY PCI ────────────────────────────────────────────── */
     #why {
-      background: var(--cream);
+      background: var(--white);
       padding: 7rem 2.5rem;
     }
     .why-inner {
@@ -525,9 +619,84 @@
     }
     .pillar-text p { font-size: 0.88rem; color: var(--charcoal); line-height: 1.75; }
 
+    /* ─── CONTENT ECOSYSTEM ──────────────────────────────────── */
+    #content-ecosystem {
+      background: var(--green);
+      padding: 7rem 2.5rem;
+    }
+    .content-eco-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .content-eco-header {
+      text-align: center;
+      margin-bottom: 4.5rem;
+    }
+    .content-eco-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      color: var(--cream);
+      margin-bottom: 1.25rem;
+    }
+    .content-eco-header p {
+      font-size: 0.95rem;
+      color: var(--silver-light);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.85;
+    }
+    .content-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+    }
+    .content-card {
+      background: var(--green-mid);
+      padding: 3.5rem 3rem;
+    }
+    .content-card .content-type {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+    .content-card h3 {
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .content-card p {
+      font-size: 0.9rem;
+      color: var(--silver-light);
+      line-height: 1.85;
+      margin-bottom: 2rem;
+    }
+    .btn-cream-outline {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: transparent;
+      padding: 0.75rem 1.75rem;
+      border: 1px solid rgba(247,244,235,0.5);
+      transition: border-color 0.25s, background 0.25s;
+    }
+    .btn-cream-outline:hover { border-color: var(--cream); background: rgba(247,244,235,0.08); }
+
     /* ─── FOUNDER ────────────────────────────────────────────── */
     #founder {
-      background: var(--white);
+      background: var(--cream);
       padding: 7rem 2.5rem;
     }
     .founder-inner {
@@ -576,7 +745,7 @@
       margin-top: 2.5rem;
       padding: 1.75rem;
       border: 1px solid var(--cream-dark);
-      background: var(--cream);
+      background: var(--white);
       font-size: 0.82rem;
       color: var(--charcoal);
       line-height: 1.75;
@@ -589,7 +758,7 @@
       padding: 7rem 2.5rem;
       text-align: center;
     }
-    .cta-inner { max-width: 680px; margin: 0 auto; }
+    .cta-inner { max-width: 720px; margin: 0 auto; }
     .cta-inner .section-label { color: var(--silver); justify-content: center; display: block; text-align: center; }
     .cta-inner h2 {
       font-family: var(--serif);
@@ -644,8 +813,8 @@
       max-width: var(--max-w);
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 4rem;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3.5rem;
       align-items: start;
       padding-bottom: 3rem;
       border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -656,6 +825,7 @@
       font-size: 0.9rem;
       font-style: italic;
       color: var(--silver);
+      line-height: 1.7;
     }
     .footer-col h4 {
       font-family: var(--sans);
@@ -690,34 +860,49 @@
     }
 
     /* ─── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 1080px) {
+      .pillars-grid { grid-template-columns: repeat(3, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+
     @media (max-width: 960px) {
       #hero { grid-template-columns: 1fr; }
       .hero-photo-col { display: none; }
       .hero-text-col { padding: 6rem 1.5rem 5rem; }
-      .intro-strip-inner, .gap-inner, .why-inner, .founder-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .intro-strip-inner,
+      .gap-inner,
+      .why-inner,
+      .founder-inner,
+      .ecosystem-header { grid-template-columns: 1fr; gap: 3rem; }
       .serve-top { grid-template-columns: 1fr; gap: 2.5rem; }
       .serve-top-photo { height: 280px; }
-      .steps, .serve-grid { grid-template-columns: 1fr; }
-      .footer-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .serve-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+      .content-cards { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
       .nav-links { display: none; }
       .founder-photo-badge { width: 80px; bottom: -0.75rem; right: -0.75rem; }
       .gap-inner { padding: 0 1.5rem; }
       .stat-block { margin-top: 2rem; }
       .stat-block .stat-number { font-size: 2.4rem; }
-      #intro-strip, #gap, #framework, #serve, #why, #founder, #cta { padding: 5rem 1.5rem; }
-      .framework-inner, .serve-inner, .why-inner { padding: 0; }
+      #intro-strip, #gap, #framework, #ecosystem, #serve, #why, #content-ecosystem, #founder, #cta { padding: 5rem 1.5rem; }
+      .framework-inner, .serve-inner, .why-inner, .ecosystem-inner { padding: 0; }
       .cta-inner { padding: 0 1.5rem; }
-      .hero-text-col h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
-      .hero-text-col .tagline { font-size: clamp(1.1rem, 4vw, 1.6rem); }
       nav { padding: 1rem 1.25rem; }
       .nav-logo img { height: 32px; }
       .nav-cta { padding: 0.5rem 1rem; font-size: 0.65rem; }
     }
 
+    @media (max-width: 600px) {
+      .serve-grid { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 480px) {
       .hero-text-col { padding: 5.5rem 1.25rem 4rem; }
-      .hero-text-col h1 { font-size: clamp(1.9rem, 9vw, 2.8rem); }
       .stat-block .stat-number { font-size: 2rem; }
       .step { padding: 2rem 1.5rem; }
       .founder-photo-badge { display: none; }
@@ -725,6 +910,7 @@
       .serve-grid { gap: 1.5rem; }
       .why-pillars { gap: 1.5rem; }
       .pillar { flex-direction: column; gap: 0.75rem; }
+      .content-card { padding: 2.5rem 1.75rem; }
     }
   </style>
 </head>
@@ -737,7 +923,8 @@
     </div>
     <ul class="nav-links">
       <li><a href="#gap">Our Approach</a></li>
-      <li><a href="#framework">The Framework</a></li>
+      <li><a href="#framework">True North</a></li>
+      <li><a href="#ecosystem">The Ecosystem</a></li>
       <li><a href="#serve">Who We Serve</a></li>
       <li><a href="#founder">About</a></li>
     </ul>
@@ -750,21 +937,22 @@
       <span class="section-label" style="color:var(--silver);">Pure Compass Investments</span>
       <h1 class="tagline">
         Clarity Before Capital.<br />
-        <em>Orientation Before Movement.</em>
+        <em>Orientation Before Movement.</em><br />
+        Where Legacy Meets Direction.
       </h1>
       <p class="descriptor">
-        Integrity-first real estate advisory and representation for first-generation wealth builders, diaspora investors, and relocating professionals navigating the Central Florida market.
+        An integrity-first real estate and investor advisory ecosystem serving first-generation wealth builders, diaspora investors, and communities historically excluded from structured wealth-building pathways. Anchored in Central Florida. Expanding into Georgia.
       </p>
       <div class="hero-actions">
         <a href="mailto:deals@purecompassinvest.com" class="btn-cream">Book a Strategy Call</a>
-        <a href="#gap" class="btn-ghost">Our Approach</a>
+        <a href="#ecosystem" class="btn-ghost">Explore the Ecosystem</a>
       </div>
       <div class="hero-tagline-sub">
-        <p>Where Legacy Meets Direction.</p>
+        <p>Pure Compass exists at the intersection of capital and conscience.</p>
       </div>
     </div>
     <div class="hero-photo-col">
-      <img src="closing deals.png" alt="A Black woman real estate professional" />
+      <img src="closing deals.png" alt="A professional real estate advisor in consultation" />
     </div>
   </section>
 
@@ -777,12 +965,10 @@
       </div>
       <div class="intro-strip-right">
         <p>Most real estate professionals are trained to close deals. We are trained to protect decisions. Before a contract is ever signed, we ensure that every client understands the full structural picture of what they are stepping into.</p>
-        <p>Pure Compass exists for the investor who refuses to be rushed, the family that demands clarity before commitment, and the wealth builder who knows that the right move at the right time is worth more than any fast close.</p>
+        <p>Pure Compass is a complete investor ecosystem. Clients are served through the full arc of their wealth-building journey, from capital readiness to legal protection, from property acquisition to estate planning and legacy preservation. The relationship is the asset.</p>
       </div>
     </div>
   </section>
-
-
 
   <!-- ─── THE DECISION GAP ──────────────────────────────────────── -->
   <section id="gap">
@@ -791,9 +977,10 @@
         <span class="section-label">The Problem</span>
         <h2>The Real Estate Industry Is Built for Speed. You Need It Built for Durability.</h2>
         <p>Most real estate advice is designed to close transactions, not support thoughtful decision-making. In a complex, fast-moving market like Central Florida, this leaves investors and relocating families rushed, uncertain, and structurally misaligned.</p>
-        <p>When affordability is assessed only by lender qualification rather than long-term holding resilience, "affordable" quickly becomes fragile. Insurance volatility, tax reassessments, and HOA exposure are rarely part of the conversation until after the contract is signed.</p>
+        <p>When affordability is assessed only by lender qualification rather than long-term holding resilience, "affordable" quickly becomes fragile. Insurance volatility, tax reassessments, HOA and CDD exposure, and flood zone risk are rarely part of the conversation until after the contract is signed.</p>
         <div class="stat-block">
-          <div class="stat-number">Less than 1%</div>      <div class="stat-label">of real estate investors in the United States are Black women, despite 61% of Black women identifying investing as a primary pathway to wealth.</div>
+          <div class="stat-number">Less than 1%</div>
+          <div class="stat-label">of real estate investors in the United States are Black women, despite 61% of Black women identifying investing as a primary pathway to wealth.</div>
         </div>
       </div>
       <div class="gap-right">
@@ -802,41 +989,110 @@
         <h3>Pure Compass Exists to Close That Gap.</h3>
         <p>We do not believe the solution is more information. The solution is a trusted advisor who translates complexity into clarity, who stress-tests decisions before capital is deployed, and who treats your real estate purchase as the foundation of a generational legacy.</p>
         <p>We bring structural discipline to a process that is too often driven by urgency. Every client engagement begins with education, moves through orientation, and arrives at execution only when you are fully prepared and aligned.</p>
+        <p>No client is turned away at the door. Clients who are not yet financially ready are held in the ecosystem through the Clarity Before Capital educational pathway, oriented toward readiness, and guided back through the appropriate pillars when the time comes.</p>
         <p>This is not transaction-first representation. This is decision-first advisory.</p>
       </div>
     </div>
   </section>
 
-  <!-- ─── FRAMEWORK ─────────────────────────────────────────────── -->
+  <!-- ─── PHOTO BREAK ───────────────────────────────────────────── -->
+  <div class="photo-break">
+    <img src="img-multigenerational.jpg" alt="A multigenerational family reviewing financial documents together" />
+    <div class="photo-break-overlay">
+      <blockquote>We guide intentional investors toward real estate strategies that build generational choice, not just generational wealth.</blockquote>
+    </div>
+  </div>
+
+  <!-- ─── TRUE NORTH FRAMEWORK ─────────────────────────────────── -->
   <section id="framework">
     <div class="framework-inner">
       <div class="framework-header">
         <span class="section-label" style="color:var(--silver); text-align:center; display:block;">How We Work</span>
-        <h2>The Pure Compass Framework</h2>
-        <p>A structured, three-step process that stress-tests your real estate decisions for long-term sustainability before a contract is ever signed.</p>
+        <h2>The True North Framework</h2>
+        <p>Every client engagement at Pure Compass is governed by the True North Framework, regardless of which pillar they enter through. Four elements. One standard. No exceptions.</p>
       </div>
       <div class="steps">
         <div class="step">
           <div class="step-number">01</div>
-          <h3>Education &amp; Strategy</h3>
-          <p>We clarify market dynamics, insurance volatility, tax reassessment risks, and decision frameworks tailored to your specific situation and goals. You understand the true cost of ownership before you make a move.</p>
-          <div class="step-outcome">Outcome: Informed Confidence</div>
+          <h3>True North Vision</h3>
+          <p>We begin by establishing where you are going. Not just the property you want, but the legacy you are building. Your vision anchors every recommendation we make and every decision we stress-test together.</p>
+          <div class="step-outcome">Outcome: Anchored Direction</div>
         </div>
         <div class="step">
           <div class="step-number">02</div>
-          <h3>Orientation &amp; Readiness</h3>
-          <p>We utilize behavioral intelligence to understand how you process decisions and communicate. Your options, risks, and timing are presented in a way that aligns with how you think, so movement is intentional, not pressured.</p>
-          <div class="step-outcome">Outcome: Structural Alignment</div>
+          <h3>Capital Clarity</h3>
+          <p>We assess your full capital picture before any movement. Credit readiness, lending options, holding capacity, and long-term resilience are all evaluated so that your capital is deployed with precision, not pressure.</p>
+          <div class="step-outcome">Outcome: Informed Capital Readiness</div>
         </div>
         <div class="step">
           <div class="step-number">03</div>
-          <h3>Professional Execution</h3>
-          <p>Transactions are executed with structural precision under licensed brokerage supervision. Every detail is managed with the same discipline and care that defined the advisory process from the start.</p>
+          <h3>Market Grounding</h3>
+          <p>We orient you to the structural realities of your target market. Insurance volatility, tax reassessment exposure, HOA and CDD risk, and market timing are all part of the conversation before a contract is ever considered.</p>
+          <div class="step-outcome">Outcome: Structural Alignment</div>
+        </div>
+        <div class="step">
+          <div class="step-number">04</div>
+          <h3>Values Alignment</h3>
+          <p>Every recommendation is filtered through your values, your timeline, and your legacy goals. We use behavioral intelligence to ensure that how we communicate and guide you matches how you naturally make decisions.</p>
           <div class="step-outcome">Outcome: A Legacy-Ready Closing</div>
         </div>
       </div>
       <div class="framework-photo">
-        <img src="close the deal keys.png" alt="Keys to a new property" />
+        <img src="img-advisor-consult.jpg" alt="An advisor in a one-on-one consultation with a client" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FIVE-PILLAR ECOSYSTEM ─────────────────────────────────── -->
+  <section id="ecosystem">
+    <div class="ecosystem-inner">
+      <div class="ecosystem-header">
+        <div class="ecosystem-header-left">
+          <span class="section-label">The Five-Pillar Investor Ecosystem</span>
+          <h2>One Trusted Relationship. Five Integrated Capabilities.</h2>
+        </div>
+        <div class="ecosystem-header-right">
+          <p>The five pillars are not separate businesses. They are integrated capabilities delivered through one trusted relationship. Every client who engages Pure Compass has access to the complete ecosystem, from capital access to legacy protection.</p>
+          <p>Clients do not move through the pillars in order. They enter where their need is greatest and are guided toward the pillars that serve their current stage of readiness. The ecosystem holds them at every stage.</p>
+        </div>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 01 -->
+        <div class="pillar-card">
+          <div class="pillar-num">01</div>
+          <h3>Capital Access</h3>
+          <p>A curated stack of investor-specific lenders covering DSCR rental loans, hard money, fix-and-flip, bridge financing, and complex files including foreign nationals, ITINs, and LLC structures. Anchored by a Black-owned, NMLS-licensed Orlando lender with closings as fast as 10 days.</p>
+        </div>
+        <!-- Pillar 02 -->
+        <div class="pillar-card">
+          <div class="pillar-num">02</div>
+          <h3>Legal Protection</h3>
+          <p>Affordable legal access covering entity formation, contract review, and ongoing legal needs at a price point accessible to first-generation and emerging investors. Designed for clients who need professional legal coverage without enterprise-level costs.</p>
+          <a href="https://nikkicatesmiller.legalshieldassociate.com/" target="_blank" rel="noopener" class="pillar-link">Explore Legal Coverage</a>
+        </div>
+        <!-- Pillar 03 -->
+        <div class="pillar-card">
+          <div class="pillar-num">03</div>
+          <h3>Real Estate Representation</h3>
+          <p>Brokerage-aligned buyer and investor representation across Florida and Georgia, embedded with the Pure Compass True North Framework. Every transaction is executed with structural precision under licensed brokerage supervision.</p>
+        </div>
+        <!-- Pillar 04 -->
+        <div class="pillar-card">
+          <div class="pillar-num">04</div>
+          <h3>REI Advisory &amp; Strategy</h3>
+          <p>Investor strategy, portfolio orientation, international market guidance, and the Clarity Before Capital consulting framework. Includes workshops, digital products, speaking engagements, and the True North Framework governing every engagement.</p>
+        </div>
+        <!-- Pillar 05 -->
+        <div class="pillar-card">
+          <div class="pillar-num">05</div>
+          <h3>Legacy &amp; Wealth Protection</h3>
+          <p>A two-layer protection pillar covering property insurance, landlord policies, short-term rental coverage, and personal lines for the active investor, alongside life insurance, whole life as a cash value vehicle, and annuity-based retirement income for generational wealth preservation.</p>
+        </div>
+      </div>
+
+      <div class="ecosystem-note">
+        <p>"Partners were selected based on integrity, regulatory standing, alignment with underserved communities, and compatibility with the Pure Compass brand thesis. Every partner in the ecosystem holds the same standard of service and shared commitment to the communities Pure Compass serves."</p>
       </div>
     </div>
   </section>
@@ -849,24 +1105,36 @@
           <span class="section-label">Who We Serve</span>
           <h2>Built for Legacy.<br />Designed for You.</h2>
           <div class="divider"></div>
-          <p>Pure Compass is designed for those who value clarity, ethics, and long-term stability over transaction speed. We proudly serve clients who are ready to invest with intention and build with purpose.</p>
+          <p>Pure Compass is designed for those who value clarity, ethics, and long-term stability over transaction speed. We serve clients at every stage of their wealth-building journey, from capital-ready investors to those still building toward their first move. No one is turned away at the door.</p>
         </div>
         <div class="serve-top-photo">
-          <img src="beyond strength 2.png" alt="Intentional investor" />
+          <img src="img-generational-wealth.jpg" alt="A diverse group of investors in a collaborative strategy session" />
         </div>
       </div>
       <div class="serve-grid">
         <div class="serve-card">
           <h3>First-Generation Wealth Builders</h3>
-          <p>You have the capital and the credit. What you need is a trusted advisor who understands the unique structural barriers you face and provides a safe, educational space to deploy your resources with confidence.</p>
+          <p>You have the capital and the credit. What you need is a trusted advisor who understands the unique structural barriers you face and provides a safe, educational space to deploy your resources with confidence and precision.</p>
         </div>
         <div class="serve-card">
-          <h3>Diaspora &amp; Out-of-State Investors</h3>
-          <p>Whether you are building a portfolio in Central Florida or exploring investment opportunities in the Caribbean and West Africa, we provide the structural guidance to enter unfamiliar markets with discipline and precision.</p>
+          <h3>Diaspora &amp; International Investors</h3>
+          <p>Whether you are building a portfolio in Central Florida or exploring investment opportunities across Ghana, Portugal, Panama, Colombia, or Rwanda, we provide the structural guidance to enter unfamiliar markets with discipline and a clear strategy.</p>
         </div>
         <div class="serve-card">
           <h3>Relocating Professionals &amp; Families</h3>
-          <p>Relocation is one of the highest-stakes decisions a family makes. We ensure you are oriented to your new market before you are ever asked to sign anything, so your move supports your life, not just your timeline.</p>
+          <p>Relocation is one of the highest-stakes decisions a family makes. We ensure you are fully oriented to your new market before you are ever asked to sign anything, so your move supports your life, not just your timeline.</p>
+        </div>
+        <div class="serve-card">
+          <h3>Estate &amp; Inherited Property Families</h3>
+          <p>Navigating inherited property comes with layered emotional and financial complexity. We walk alongside families through every disposition option with structural care, patience, and fiduciary discipline, ensuring the transition serves the family's long-term interests.</p>
+        </div>
+        <div class="serve-card">
+          <h3>Credit-Adjacent Clients</h3>
+          <p>Not yet loan-ready does not mean not yet welcome. Through the Clarity Before Capital educational pathway, we orient you toward capital readiness, connect you with vetted resources, and hold your place in the ecosystem until the timing is right.</p>
+        </div>
+        <div class="serve-card">
+          <h3>Investors with Legal or Protection Gaps</h3>
+          <p>If you have acquired assets without an entity structure, adequate insurance, or a legacy plan in place, you are exposed. We identify those gaps and connect you with the right pillar of the ecosystem to close them before they become costly.</p>
         </div>
       </div>
     </div>
@@ -879,8 +1147,8 @@
         <span class="section-label">Why Pure Compass</span>
         <h2>What Makes Us Different</h2>
         <div class="divider"></div>
-        <p>In an industry being reshaped by artificial intelligence and automation, the agents who will endure are those who deepen human connection rather than replace it. Technology can find you a property. It cannot tell you whether that property aligns with your legacy.</p>
-        <p>Pure Compass operates at the intersection of structural discipline and relational trust. We bring both to every engagement.</p>
+        <p>In an industry being reshaped by artificial intelligence and automation, the advisors who will endure are those who deepen human connection rather than replace it. Technology can find you a property. It cannot tell you whether that property aligns with your legacy.</p>
+        <p>Pure Compass operates at the intersection of structural discipline and relational trust. We bring both to every engagement. The ecosystem model has no direct equivalent in the boutique advisor market. This is not a feature. It is the business.</p>
       </div>
       <div class="why-pillars">
         <div class="pillar">
@@ -919,6 +1187,40 @@
             <p>Every recommendation is made with your long-term wellbeing as the standard. We do not benefit from urgency. We benefit from your success.</p>
           </div>
         </div>
+        <div class="pillar">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="pillar-text">
+            <h4>Built for Communities Left Behind</h4>
+            <p>Pure Compass was built specifically for first-generation wealth builders, diaspora investors, and communities historically excluded from structured wealth-building pathways. This is not a niche. It is our purpose.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTENT ECOSYSTEM ─────────────────────────────────────── -->
+  <section id="content-ecosystem">
+    <div class="content-eco-inner">
+      <div class="content-eco-header">
+        <span class="section-label" style="color:var(--silver); text-align:center; display:block;">Stay Connected</span>
+        <h2>Education Is Part of the Ecosystem</h2>
+        <p>Pure Compass extends beyond advisory sessions. The Clarity Before Capital newsletter and The Wealth We Leave podcast are active channels for investor education, orientation, and community.</p>
+      </div>
+      <div class="content-cards">
+        <div class="content-card">
+          <span class="content-type">Newsletter</span>
+          <h3>Clarity Before Capital</h3>
+          <p>Investor education, market orientation, and decision-support content delivered directly to your inbox. Built for the intentional investor who wants to understand the full picture before any capital moves.</p>
+          <a href="https://claritybeforecapital.beehiiv.com" target="_blank" rel="noopener" class="btn-cream-outline">Subscribe to the Newsletter</a>
+        </div>
+        <div class="content-card">
+          <span class="content-type">Podcast</span>
+          <h3>The Wealth We Leave</h3>
+          <p>Conversations about generational wealth, legacy-building, and the real decisions behind real estate. Hosted by Nikki Cates, this podcast is for investors who think beyond the transaction and toward the inheritance they are building.</p>
+          <a href="mailto:deals@purecompassinvest.com?subject=The%20Wealth%20We%20Leave%20Podcast" class="btn-cream-outline">Get Notified</a>
+        </div>
       </div>
     </div>
   </section>
@@ -927,8 +1229,10 @@
   <section id="founder">
     <div class="founder-inner">
       <div class="founder-photo-col">
-        <img src="NikkiCM RE.jpg" alt="Nikki Cates, Founder of Pure Compass Investments" />
-
+        <img src="NikkiCM RE.jpg" alt="Nikki Cates, Founder and CEO of Pure Compass Investments" />
+        <div class="founder-photo-badge">
+          <img src="updated pure compass the ONE.png" alt="Pure Compass Investments" />
+        </div>
       </div>
       <div class="founder-content">
         <span class="section-label">About the Founder</span>
@@ -937,7 +1241,7 @@
         <p>She founded Pure Compass to return real estate to its true intention: placing property into the hands of people for future endeavors, not just immediate gratification. Her work is grounded in the conviction that the most powerful thing an advisor can do is slow down, listen deeply, and ensure that every decision is structurally sound before any capital moves.</p>
         <p>Nikki also serves as CEO and Founder of Strategic Transformations, an AI-era leadership strategy firm, and as Executive Director of the URI Recalibration Institute. Her cross-disciplinary expertise in structural recalibration, behavioral intelligence, and organizational transformation informs every client engagement at Pure Compass.</p>
         <div class="brokerage-note">
-          <strong>Licensing &amp; Brokerage Affiliation:</strong> Nikki Cates is in the final stages of Florida real estate licensure. All regulated real estate transactions are executed through a licensed brokerage partnership. <em>Brokerage affiliation to be confirmed upon licensure.</em> Pure Compass Investments provides education and decision support. We are not a brokerage and we are not investment managers.
+          <strong>Licensing &amp; Brokerage Affiliation:</strong> Nikki Cates is completing Florida real estate licensure. All regulated real estate transactions are executed through a licensed brokerage partnership currently being finalized. Pure Compass Investments provides education, advisory, and decision support. We are not an independent brokerage and we are not investment managers.
         </div>
       </div>
     </div>
@@ -946,12 +1250,12 @@
   <!-- ─── CTA ───────────────────────────────────────────────────── -->
   <section id="cta">
     <div class="cta-inner">
-      <span class="section-label">Ready to Get Oriented?</span>
+      <span class="section-label">Ready to Find Your True North?</span>
       <h2>Your Legacy Deserves a Pure Compass.</h2>
-      <p>Before you write an offer, before you move capital, before you sign anything, let's talk. A strategy call costs you nothing. A misaligned decision costs you everything.</p>
+      <p>Before you write an offer, before you move capital, before you sign anything, let's establish your True North. A strategy call costs you nothing. A misaligned decision costs you everything. The relationship is the asset, and it starts here.</p>
       <div class="cta-actions">
         <a href="mailto:deals@purecompassinvest.com" class="btn-green-solid">Book a Strategy Call</a>
-        <a href="mailto:deals@purecompassinvest.com?subject=Florida%20Relocation%20Readiness%20Guide" class="btn-green">Get the Relocation Guide</a>
+        <a href="https://claritybeforecapital.beehiiv.com" target="_blank" rel="noopener" class="btn-green">Subscribe to Clarity Before Capital</a>
       </div>
     </div>
   </section>
@@ -961,23 +1265,31 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="updated pure compass the ONE.png" alt="Pure Compass Investments" />
-        <p class="footer-tagline">Where Legacy Meets Direction.</p>
+        <p class="footer-tagline">Clarity Before Capital.<br />Orientation Before Movement.<br />Where Legacy Meets Direction.</p>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="mailto:deals@purecompassinvest.com">deals@purecompassinvest.com</a>
         <a href="tel:4076934449">407-693-4449</a>
-        <p>Central Florida</p>
+        <p>Central Florida &amp; Georgia</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#framework">True North Framework</a>
+        <a href="#ecosystem">The Ecosystem</a>
+        <a href="#serve">Who We Serve</a>
+        <a href="#founder">About Nikki</a>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
         <a href="https://linkedin.com/in/nikkicates" target="_blank" rel="noopener">LinkedIn</a>
         <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://claritybeforecapital.beehiiv.com" target="_blank" rel="noopener">Newsletter</a>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Pure Compass Investments. All rights reserved.</p>
-      <p>Education and decision support only. Not a licensed brokerage. Not investment management advice.</p>
+      <p>Education and decision support only. Brokerage affiliation pending licensure. Not investment management advice.</p>
     </div>
   </footer>
 
