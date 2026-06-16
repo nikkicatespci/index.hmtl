@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Pure Compass Investments</title>
+  <meta name="description" content="Investor education, legal protection, real estate strategy, and legacy planning resources from Pure Compass Investments. Clarity before capital." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+
+    :root {
+      --green:        #0e3b28;
+      --green-mid:    #174d35;
+      --green-light:  #1e6040;
+      --silver:       #a6a7a5;
+      --silver-light: #c8c9c7;
+      --cream:        #f7f4eb;
+      --cream-dark:   #ede9dc;
+      --charcoal:     #1a1a1a;
+      --white:        #ffffff;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans:  'Jost', 'Helvetica Neue', sans-serif;
+      --max-w: 1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      color: var(--charcoal);
+      background: var(--white);
+      line-height: 1.75;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 2.5rem; }
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+    .divider { width: 48px; height: 1px; background: var(--silver); margin: 1.75rem 0; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(14, 59, 40, 0.97);
+      backdrop-filter: blur(10px);
+      padding: 1.1rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.9rem; }
+    .nav-logo img { height: 64px; width: auto; filter: brightness(1.6) contrast(0.9); }
+    .nav-wordmark { display: flex; flex-direction: column; line-height: 1.1; }
+    .nav-wordmark .name {
+      font-family: var(--serif); font-size: 0.95rem; font-weight: 500;
+      letter-spacing: 0.14em; color: var(--cream); text-transform: uppercase;
+    }
+    .nav-wordmark .sub {
+      font-family: var(--sans); font-size: 0.58rem; font-weight: 400;
+      letter-spacing: 0.32em; color: var(--silver-light); text-transform: uppercase;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 400;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--silver-light);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--cream); }
+    .nav-cta {
+      font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--green); background: var(--cream);
+      padding: 0.55rem 1.5rem; border: 1px solid var(--cream);
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-cta:hover { background: transparent; color: var(--cream); }
+
+    /* FOOTER */
+    footer { background: var(--charcoal); padding: 4rem 2.5rem 2.5rem; }
+    .footer-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3.5rem; align-items: start;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-brand img { height: 50px; width: auto; margin-bottom: 1rem; }
+    .footer-tagline { font-family: var(--serif); font-size: 0.9rem; font-style: italic; color: var(--silver); line-height: 1.7; }
+    .footer-col h4 {
+      font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.28em; text-transform: uppercase; color: var(--silver); margin-bottom: 1.25rem;
+    }
+    .footer-col a, .footer-col p {
+      font-size: 0.85rem; color: rgba(255,255,255,0.55);
+      display: block; line-height: 2; transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--cream); }
+    .footer-bottom {
+      max-width: var(--max-w); margin: 2rem auto 0;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.3); line-height: 1.6; }
+
+    /* BUTTONS */
+    .btn-cream {
+      display: inline-block; font-family: var(--sans); font-size: 0.72rem;
+      font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--green); background: var(--cream);
+      padding: 0.9rem 2rem; border: 1px solid var(--cream);
+      transition: background 0.25s, color 0.25s;
+    }
+    .btn-cream:hover { background: transparent; color: var(--green); border-color: var(--green); }
+    .btn-ghost {
+      display: inline-block; font-family: var(--sans); font-size: 0.72rem;
+      font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--charcoal); background: transparent;
+      padding: 0.9rem 2rem; border: 1px solid rgba(26,26,26,0.35);
+      transition: border-color 0.25s, color 0.25s;
+    }
+    .btn-ghost:hover { border-color: var(--green); color: var(--green); }
+
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      nav { padding: 1rem 1.25rem; }
+      .nav-logo img { height: 40px; }
+      .nav-cta { padding: 0.5rem 1rem; font-size: 0.65rem; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+
+
+    /* BLOG HERO */
+    .blog-hero {
+      background: var(--green);
+      padding: 10rem 2.5rem 6rem;
+      text-align: center;
+    }
+    .blog-hero-inner { max-width: 760px; margin: 0 auto; }
+    .blog-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 300; color: var(--cream); line-height: 1.12;
+      margin-bottom: 1.25rem;
+    }
+    .blog-hero h1 em { font-style: italic; color: var(--silver-light); }
+    .blog-hero p {
+      font-size: 1rem; color: var(--silver-light); line-height: 1.85;
+      max-width: 580px; margin: 0 auto 2.5rem;
+    }
+
+    /* PILLAR NAV */
+    .pillar-nav {
+      background: var(--cream);
+      padding: 2rem 2.5rem;
+      border-bottom: 1px solid var(--cream-dark);
+      position: sticky; top: 72px; z-index: 50;
+    }
+    .pillar-nav-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;
+    }
+    .pillar-nav-inner span {
+      font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--silver);
+      margin-right: 0.5rem;
+    }
+    .pillar-nav-inner a {
+      font-family: var(--sans); font-size: 0.68rem; font-weight: 400;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal);
+      padding: 0.4rem 1rem; border: 1px solid rgba(26,26,26,0.2);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .pillar-nav-inner a:hover {
+      background: var(--green); color: var(--cream); border-color: var(--green);
+    }
+
+    /* CATEGORY SECTION */
+    .category-section {
+      padding: 6rem 0;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+    .category-section:nth-child(even) { background: var(--cream); }
+    .category-section:nth-child(odd) { background: var(--white); }
+    .category-header {
+      margin-bottom: 3.5rem;
+    }
+    .pillar-badge {
+      display: inline-block;
+      font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--white); background: var(--green);
+      padding: 0.3rem 0.85rem; margin-bottom: 1rem;
+    }
+    .category-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 400; color: var(--green); margin-bottom: 0.75rem;
+    }
+    .cat-desc {
+      font-size: 0.95rem; color: var(--charcoal); line-height: 1.8;
+      max-width: 680px;
+    }
+
+    /* POSTS GRID */
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .post-card {
+      border-top: 3px solid var(--green);
+      background: var(--white);
+      transition: box-shadow 0.2s;
+    }
+    .category-section:nth-child(even) .post-card { background: var(--white); }
+    .post-card:hover { box-shadow: 0 4px 24px rgba(14,59,40,0.1); }
+    .post-card a {
+      display: block; padding: 2rem 1.75rem; height: 100%;
+      display: flex; flex-direction: column;
+    }
+    .post-card-cat {
+      font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
+      letter-spacing: 0.24em; text-transform: uppercase; color: var(--silver);
+      margin-bottom: 0.85rem; display: block;
+    }
+    .post-card h3 {
+      font-family: var(--serif); font-size: 1.25rem; font-weight: 400;
+      color: var(--green); line-height: 1.25; margin-bottom: 0.75rem;
+    }
+    .post-card p {
+      font-size: 0.88rem; color: var(--charcoal); line-height: 1.75;
+      flex: 1; margin-bottom: 1.5rem;
+    }
+    .post-card-link {
+      font-family: var(--sans); font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--green);
+      border-bottom: 1px solid var(--green); padding-bottom: 2px;
+      display: inline-block; margin-top: auto;
+      transition: opacity 0.2s;
+    }
+    .post-card:hover .post-card-link { opacity: 0.65; }
+
+    /* BLOG CTA STRIP */
+    .blog-cta {
+      background: var(--green); padding: 6rem 2.5rem; text-align: center;
+    }
+    .blog-cta-inner { max-width: 680px; margin: 0 auto; }
+    .blog-cta h2 {
+      font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300; color: var(--cream); margin-bottom: 1.25rem;
+    }
+    .blog-cta p {
+      font-size: 0.95rem; color: var(--silver-light); line-height: 1.85; margin-bottom: 2.5rem;
+    }
+    .blog-cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 768px) {
+      .blog-hero { padding: 8rem 1.5rem 4rem; }
+      .pillar-nav { padding: 1.25rem 1.5rem; top: 60px; }
+      .category-section { padding: 4rem 0; }
+      .posts-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+
+  <nav>
+    <div class="nav-logo">
+      <a href="../index.html">
+        <img src="../logo-transparent.png" alt="Pure Compass Investments" style="height:64px;width:auto;filter:brightness(1.6) contrast(0.9);" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html#gap">Our Approach</a></li>
+      <li><a href="../index.html#framework">True North</a></li>
+      <li><a href="../index.html#ecosystem">The Ecosystem</a></li>
+      <li><a href="../index.html#serve">Who We Serve</a></li>
+      <li><a href="../index.html#founder">About</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+    </ul>
+    <a href="https://api.leadconnectorhq.com/widget/bookings/pure-compass-scheduling" target="_blank" rel="noopener" class="nav-cta">Book a Strategy Call</a>
+  </nav>
+
+
+  <section class="blog-hero">
+    <div class="blog-hero-inner">
+      <span class="section-label" style="color:var(--silver); text-align:center; display:block;">The Pure Compass Blog</span>
+      <h1>Clarity Before Capital.<br /><em>Knowledge Before Movement.</em></h1>
+      <p>Investor education, legal protection, real estate strategy, and legacy planning resources for first-generation wealth builders, diaspora investors, and communities building something that lasts.</p>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/pure-compass-scheduling" target="_blank" rel="noopener" class="btn-cream">Book a Strategy Call</a>
+    </div>
+  </section>
+
+  <nav class="pillar-nav" aria-label="Blog categories">
+    <div class="pillar-nav-inner">
+      <span>Browse by Pillar:</span>
+      <a href="#legal-protection">Legal Protection</a>
+      <a href="#capital-access">Capital Access</a>
+      <a href="#real-estate-representation">Real Estate</a>
+      <a href="#rei-advisory">REI Advisory</a>
+      <a href="#legacy-wealth-protection">Legacy &amp; Wealth</a>
+    </div>
+  </nav>
+
+
+  <section class="category-section" id="legal-protection">
+    <div class="container">
+      <div class="category-header">
+        <span class="pillar-badge">Pillar 02</span>
+        <h2>Legal Protection</h2>
+        <p class="cat-desc">Entity formation, contract review, estate access, and the legal protection every investor and inheritor needs before they sign anything.</p>
+      </div>
+      <div class="posts-grid">
+
+        <article class="post-card">
+          <a href="12-documents-to-review-before-you-sign.html">
+            <span class="post-card-cat">Legal Protection</span>
+            <h3>12 Documents to Review Before You Sign</h3>
+            <p>Most legal damage happens before anyone signs anything wrong. Here are the 12 documents worth having reviewed first, and why it matters more than you think.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="what-to-know-before-signing-a-quitclaim-deed.html">
+            <span class="post-card-cat">Legal Protection</span>
+            <h3>What to Know Before Signing a Quitclaim Deed</h3>
+            <p>A quitclaim deed transfers what you have, not a guarantee of clear title. Here's what it actually does, and doesn't do, before you sign one.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="inherited-property-with-siblings-what-to-ask.html">
+            <span class="post-card-cat">Legal Protection</span>
+            <h3>Inherited Property With Siblings: What to Ask Before You Agree</h3>
+            <p>Inheriting property with siblings comes with more legal exposure than most families realize. Here's what to ask before you agree to anything.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="why-your-lease-should-be-reviewed-before-you-use-it.html">
+            <span class="post-card-cat">Legal Protection</span>
+            <h3>Why Your Lease Should Be Reviewed Before You Use It</h3>
+            <p>A free lease template isn't the same as a legally sound one. Here's what landlords miss when they skip the review.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="contractor-agreements-what-property-owners-should-watch-for.html">
+            <span class="post-card-cat">Legal Protection</span>
+            <h3>Contractor Agreements: What Property Owners Should Watch For</h3>
+            <p>Most contractor disputes trace back to the agreement, not the work. Here's what to check before you sign one.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="your-llc-may-not-be-protecting-you.html">
+            <span class="post-card-cat">Legal Protection</span>
+            <h3>Your LLC May Not Be Protecting You the Way You Think</h3>
+            <p>Forming an LLC isn't the same as operating one correctly. Here's where the protection quietly breaks down.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="legal-access-for-first-generation-wealth-builders.html">
+            <span class="post-card-cat">Legal Protection</span>
+            <h3>Legal Access for First-Generation Wealth Builders</h3>
+            <p>Legal protection has historically been gatekept by cost. Here's why access, not income, should determine who gets protected.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="before-you-accept-a-real-estate-investor-offer.html">
+            <span class="post-card-cat">Legal Protection</span>
+            <h3>Before You Accept a Real Estate Investor Offer</h3>
+            <p>Cash offers on inherited or distressed property aren't always what they look like. Here's what to check before you sign.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="category-section" id="capital-access">
+    <div class="container">
+      <div class="category-header">
+        <span class="pillar-badge">Pillar 01</span>
+        <h2>Capital Access & Lending</h2>
+        <p class="cat-desc">DSCR loans, hard money, foreign national financing, and the lending strategies built for investors who don't fit the conventional box.</p>
+      </div>
+      <div class="posts-grid">
+
+        <article class="post-card">
+          <a href="what-is-a-dscr-loan.html">
+            <span class="post-card-cat">Capital Access & Lending</span>
+            <h3>What Is a DSCR Loan, and Why Investors Use It</h3>
+            <p>DSCR loans qualify you on the property's cash flow, not your personal income. Here's how they work and who they actually fit.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="foreign-national-itin-loan-denied.html">
+            <span class="post-card-cat">Capital Access & Lending</span>
+            <h3>Why Foreign Nationals and ITIN Holders Get Denied for Loans, and What Actually Works</h3>
+            <p>Conventional lenders weren't built for foreign national or ITIN borrowers. Here's why, and what actually works instead.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="hard-money-loans-explained.html">
+            <span class="post-card-cat">Capital Access & Lending</span>
+            <h3>Hard Money 101: When a Bridge Loan Makes Sense (and When It Doesn't)</h3>
+            <p>Hard money isn't a last resort, it's a speed tool. Here's when it actually makes sense, and when it doesn't.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="llc-property-financing-challenges.html">
+            <span class="post-card-cat">Capital Access & Lending</span>
+            <h3>Why Holding Property in an LLC Can Make Lending Harder, Unless You Do This</h3>
+            <p>Holding property in an LLC protects you legally, but it can complicate financing if you don't plan for it. Here's what to know.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="credit-gatekeeping-first-generation-investors.html">
+            <span class="post-card-cat">Capital Access & Lending</span>
+            <h3>The Credit Gatekeeping Nobody Warns First-Generation Investors About</h3>
+            <p>Conventional lending wasn't built with first-generation investors in mind. Here's the history behind that, and what's actually changing it.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="category-section" id="real-estate-representation">
+    <div class="container">
+      <div class="category-header">
+        <span class="pillar-badge">Pillar 03</span>
+        <h2>Real Estate Representation</h2>
+        <p class="cat-desc">Probate sales, investor buyer representation, and first-generation seller strategy across Florida and Georgia.</p>
+      </div>
+      <div class="posts-grid">
+
+        <article class="post-card">
+          <a href="probate-real-estate-sale-explained.html">
+            <span class="post-card-cat">Real Estate Representation</span>
+            <h3>What Makes a Probate Real Estate Sale Different, and Why It Needs a Specialist</h3>
+            <p>Probate sales aren't standard listings. Here's what's genuinely different, and why a specialist matters.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="investor-focused-real-estate-agent.html">
+            <span class="post-card-cat">Real Estate Representation</span>
+            <h3>What an Investor-Focused Agent Actually Does Differently</h3>
+            <p>Most agents can show you a house. An investor-focused agent runs the numbers with you first. Here's the actual difference.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="foreign-national-buying-us-real-estate.html">
+            <span class="post-card-cat">Real Estate Representation</span>
+            <h3>What Foreign National Buyers Need to Know Before Purchasing U.S. Real Estate</h3>
+            <p>Buying U.S. property as a non-resident comes with steps most agents won't think to mention. Here's what to ask about first.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="selling-inherited-house-multiple-heirs.html">
+            <span class="post-card-cat">Real Estate Representation</span>
+            <h3>Selling an Inherited House With Multiple Heirs: How a Probate-Literate Agent Helps</h3>
+            <p>Selling inherited property with siblings or co-heirs comes with logistics most listing agents have never had to coordinate. Here's how a probate-literate agent helps.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="first-generation-sellers-strategy.html">
+            <span class="post-card-cat">Real Estate Representation</span>
+            <h3>Why 'Just List It' Isn't a Strategy for First-Generation Sellers</h3>
+            <p>A fast listing isn't always the right move for a family selling their first major asset. Here's what gets missed, and why it matters.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="category-section" id="rei-advisory">
+    <div class="container">
+      <div class="category-header">
+        <span class="pillar-badge">Pillar 04</span>
+        <h2>Investment Strategy & Advisory</h2>
+        <p class="cat-desc">Deal evaluation, strategy selection, and advisory built for investors at every stage, including those who aren't loan-ready yet.</p>
+      </div>
+      <div class="posts-grid">
+
+        <article class="post-card">
+          <a href="investment-advice-under-500k.html">
+            <span class="post-card-cat">Investment Strategy & Advisory</span>
+            <h3>You Don't Need $500,000 to Get Real Investment Advice</h3>
+            <p>Most wealth managers won't take an account under $500,000. Here's why that gap exists, and what to do instead.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="buy-and-hold-vs-brrrr-vs-str.html">
+            <span class="post-card-cat">Investment Strategy & Advisory</span>
+            <h3>Buy and Hold, BRRRR, or Short-Term Rental: Which Strategy Actually Fits Your Goals</h3>
+            <p>Each real estate strategy asks something different of your time, capital, and risk tolerance. Here's how to tell which one actually fits.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="evaluate-real-estate-deal-no-finance-background.html">
+            <span class="post-card-cat">Investment Strategy & Advisory</span>
+            <h3>How to Evaluate a Real Estate Deal Without a Financial Background</h3>
+            <p>You don't need a finance degree to evaluate a deal. You need a short list of the right questions. Here's the framework.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="credit-adjacent-before-loan-ready.html">
+            <span class="post-card-cat">Investment Strategy & Advisory</span>
+            <h3>Credit-Adjacent? Here's What to Do Before You're Loan Ready</h3>
+            <p>Not loan-ready yet doesn't mean not investable yet. Here's what to actually do with the time before you qualify.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="deal-review-investors-skip.html">
+            <span class="post-card-cat">Investment Strategy & Advisory</span>
+            <h3>The Deal Review Most Investors Skip, and Regret</h3>
+            <p>An independent second opinion before you commit costs little compared to what skipping it can cost. Here's why investors skip it anyway.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="category-section" id="legacy-wealth-protection">
+    <div class="container">
+      <div class="category-header">
+        <span class="pillar-badge">Pillar 05</span>
+        <h2>Legacy & Wealth Protection</h2>
+        <p class="cat-desc">Property insurance, landlord policies, life insurance, and the integrated protection approach that keeps what you've built from being undone.</p>
+      </div>
+      <div class="posts-grid">
+
+        <article class="post-card">
+          <a href="landlord-insurance-vs-homeowners-policy.html">
+            <span class="post-card-cat">Legacy & Wealth Protection</span>
+            <h3>Why Landlord Insurance Isn't the Same as a Homeowner's Policy (And the Gap That Costs Investors)</h3>
+            <p>A standard homeowner's policy often doesn't cover a rental. Here's the gap that catches new landlords off guard.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="life-insurance-as-legacy-plan.html">
+            <span class="post-card-cat">Legacy & Wealth Protection</span>
+            <h3>Life Insurance Isn't Just a Payout. It's a Legacy Plan, If You Use It That Way.</h3>
+            <p>A death benefit without a plan often disappears within a few years. Here's how to think about life insurance as a legacy tool instead.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="property-insurance-when-you-inherit-a-house.html">
+            <span class="post-card-cat">Legacy & Wealth Protection</span>
+            <h3>What Happens to Your Property Insurance When You Inherit a House</h3>
+            <p>Inherited property insurance doesn't just continue automatically. Here's what actually happens, and what to check first.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="questions-before-buying-insurance.html">
+            <span class="post-card-cat">Legacy & Wealth Protection</span>
+            <h3>What to Ask Before You Buy Insurance You Don't Fully Understand</h3>
+            <p>Insurance is one of the most signed-without-reading documents there is. Here's what to actually ask before you buy any policy.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="protecting-what-you-built-insurance-and-legal-access.html">
+            <span class="post-card-cat">Legacy & Wealth Protection</span>
+            <h3>Protecting What You Built: Why Investors Need Insurance and Legal Access, Not Just One or the Other</h3>
+            <p>Insurance and legal protection solve different problems. Most people only have one in place. Here's why you need both.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="blog-cta">
+    <div class="blog-cta-inner">
+      <span class="section-label" style="color:var(--silver); text-align:center; display:block;">Ready to Find Your True North?</span>
+      <h2>Your Legacy Deserves a Pure Compass.</h2>
+      <p>Before you write an offer, before you move capital, before you sign anything, let's establish your True North. A strategy call costs you nothing. A misaligned decision costs you everything.</p>
+      <div class="blog-cta-actions">
+        <a href="https://api.leadconnectorhq.com/widget/bookings/pure-compass-scheduling" target="_blank" rel="noopener" class="btn-cream">Book a Strategy Call</a>
+        <a href="https://claritybeforecapital.beehiiv.com" target="_blank" rel="noopener" class="btn-ghost">Subscribe to Clarity Before Capital</a>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="../logo-transparent.png" alt="Pure Compass Investments" style="height:48px;width:auto;filter:brightness(1.6) contrast(0.9);" />
+        <p class="footer-tagline">Clarity Before Capital.<br />Orientation Before Movement.<br />Where Legacy Meets Direction.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:deals@purecompassinvest.com">deals@purecompassinvest.com</a>
+        <a href="tel:4076934449">407-693-4449</a>
+        <p>Central Florida &amp; Georgia</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="../index.html#framework">True North Framework</a>
+        <a href="../index.html#ecosystem">The Ecosystem</a>
+        <a href="../index.html#serve">Who We Serve</a>
+        <a href="../index.html#founder">About Nikki</a>
+        <a href="index.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://linkedin.com/in/nikkicates" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://claritybeforecapital.beehiiv.com" target="_blank" rel="noopener">Newsletter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pure Compass Investments. All rights reserved.</p>
+      <p>Education and decision support only. Not investment, legal, or financial advice. Real estate transactions executed through licensed brokerage partnership.</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is a DSCR Loan, and Why Investors Use It | Pure Compass Investments</title>
+  <meta name="description" content="DSCR loans qualify you on the property's cash flow, not your personal income. Here's how they work and who they actually fit." />
+  <meta name="keywords" content="DSCR loan explained" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+
+    :root {
+      --green:        #0e3b28;
+      --green-mid:    #174d35;
+      --green-light:  #1e6040;
+      --silver:       #a6a7a5;
+      --silver-light: #c8c9c7;
+      --cream:        #f7f4eb;
+      --cream-dark:   #ede9dc;
+      --charcoal:     #1a1a1a;
+      --white:        #ffffff;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans:  'Jost', 'Helvetica Neue', sans-serif;
+      --max-w: 1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      color: var(--charcoal);
+      background: var(--white);
+      line-height: 1.75;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 2.5rem; }
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+    .divider { width: 48px; height: 1px; background: var(--silver); margin: 1.75rem 0; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(14, 59, 40, 0.97);
+      backdrop-filter: blur(10px);
+      padding: 1.1rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.9rem; }
+    .nav-logo img { height: 64px; width: auto; filter: brightness(1.6) contrast(0.9); }
+    .nav-wordmark { display: flex; flex-direction: column; line-height: 1.1; }
+    .nav-wordmark .name {
+      font-family: var(--serif); font-size: 0.95rem; font-weight: 500;
+      letter-spacing: 0.14em; color: var(--cream); text-transform: uppercase;
+    }
+    .nav-wordmark .sub {
+      font-family: var(--sans); font-size: 0.58rem; font-weight: 400;
+      letter-spacing: 0.32em; color: var(--silver-light); text-transform: uppercase;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 400;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--silver-light);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--cream); }
+    .nav-cta {
+      font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--green); background: var(--cream);
+      padding: 0.55rem 1.5rem; border: 1px solid var(--cream);
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-cta:hover { background: transparent; color: var(--cream); }
+
+    /* FOOTER */
+    footer { background: var(--charcoal); padding: 4rem 2.5rem 2.5rem; }
+    .footer-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3.5rem; align-items: start;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-brand img { height: 50px; width: auto; margin-bottom: 1rem; }
+    .footer-tagline { font-family: var(--serif); font-size: 0.9rem; font-style: italic; color: var(--silver); line-height: 1.7; }
+    .footer-col h4 {
+      font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.28em; text-transform: uppercase; color: var(--silver); margin-bottom: 1.25rem;
+    }
+    .footer-col a, .footer-col p {
+      font-size: 0.85rem; color: rgba(255,255,255,0.55);
+      display: block; line-height: 2; transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--cream); }
+    .footer-bottom {
+      max-width: var(--max-w); margin: 2rem auto 0;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.3); line-height: 1.6; }
+
+    /* BUTTONS */
+    .btn-cream {
+      display: inline-block; font-family: var(--sans); font-size: 0.72rem;
+      font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--green); background: var(--cream);
+      padding: 0.9rem 2rem; border: 1px solid var(--cream);
+      transition: background 0.25s, color 0.25s;
+    }
+    .btn-cream:hover { background: transparent; color: var(--green); border-color: var(--green); }
+    .btn-ghost {
+      display: inline-block; font-family: var(--sans); font-size: 0.72rem;
+      font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--charcoal); background: transparent;
+      padding: 0.9rem 2rem; border: 1px solid rgba(26,26,26,0.35);
+      transition: border-color 0.25s, color 0.25s;
+    }
+    .btn-ghost:hover { border-color: var(--green); color: var(--green); }
+
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      nav { padding: 1rem 1.25rem; }
+      .nav-logo img { height: 40px; }
+      .nav-cta { padding: 0.5rem 1rem; font-size: 0.65rem; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+
+
+    /* POST LAYOUT */
+    .post-hero {
+      background: var(--green);
+      padding: 10rem 2.5rem 5rem;
+    }
+    .post-hero-inner { max-width: 800px; margin: 0 auto; }
+    .post-category-tag {
+      display: inline-block;
+      font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--silver-light);
+      background: rgba(255,255,255,0.08);
+      padding: 0.4rem 1rem; margin-bottom: 1.75rem;
+      border: 1px solid rgba(200,201,199,0.25);
+    }
+    .post-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400; color: var(--cream); line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .post-hero .post-meta {
+      font-size: 0.8rem; color: var(--silver); letter-spacing: 0.06em;
+    }
+
+    .post-body {
+      background: var(--white);
+      padding: 5rem 2.5rem 6rem;
+    }
+    .post-body-inner {
+      max-width: 800px; margin: 0 auto;
+    }
+    .post-body-inner p {
+      font-size: 1rem; color: var(--charcoal);
+      line-height: 1.9; margin-bottom: 1.5rem;
+    }
+    .post-body-inner h2 {
+      font-family: var(--serif); font-size: 1.8rem; font-weight: 400;
+      color: var(--green); margin: 2.5rem 0 1rem; line-height: 1.2;
+    }
+    .post-body-inner h3 {
+      font-family: var(--serif); font-size: 1.4rem; font-weight: 400;
+      color: var(--green); margin: 2rem 0 0.75rem;
+    }
+    .post-body-inner strong { font-weight: 500; color: var(--charcoal); }
+    .post-body-inner ol, .post-body-inner ul {
+      padding-left: 1.5rem; margin-bottom: 1.5rem;
+    }
+    .post-body-inner li {
+      font-size: 1rem; color: var(--charcoal); line-height: 1.85; margin-bottom: 0.5rem;
+    }
+    .post-body-inner blockquote {
+      border-left: 3px solid var(--green);
+      padding: 1rem 1.5rem; margin: 2rem 0;
+      background: var(--cream);
+      font-family: var(--serif); font-style: italic;
+      font-size: 1.05rem; color: var(--green); line-height: 1.7;
+    }
+
+    .post-cta {
+      background: var(--green);
+      padding: 2.5rem 3rem;
+      margin-top: 3rem;
+      color: var(--cream);
+    }
+    .post-cta .cta-label {
+      font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--silver-light); margin-bottom: 0.75rem;
+    }
+    .post-cta p {
+      font-size: 1rem; color: var(--silver-light); line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+    .post-cta strong { color: var(--cream); font-weight: 500; }
+    .post-cta .btn-cream {
+      color: var(--green); background: var(--cream); border-color: var(--cream);
+    }
+    .post-cta .btn-cream:hover { background: transparent; color: var(--cream); border-color: var(--cream); }
+
+    .post-nav {
+      background: var(--cream);
+      padding: 3rem 2.5rem;
+      border-top: 1px solid var(--cream-dark);
+    }
+    .post-nav-inner {
+      max-width: 800px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .post-nav-inner a {
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--green);
+      border-bottom: 1px solid var(--green); padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
+    .post-nav-inner a:hover { opacity: 0.65; }
+
+    @media (max-width: 768px) {
+      .post-hero { padding: 8rem 1.5rem 4rem; }
+      .post-body { padding: 3.5rem 1.5rem 4rem; }
+      .post-cta { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+
+  <nav>
+    <div class="nav-logo">
+      <a href="../index.html">
+        <img src="../logo-transparent.png" alt="Pure Compass Investments" style="height:64px;width:auto;filter:brightness(1.6) contrast(0.9);" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html#gap">Our Approach</a></li>
+      <li><a href="../index.html#framework">True North</a></li>
+      <li><a href="../index.html#ecosystem">The Ecosystem</a></li>
+      <li><a href="../index.html#serve">Who We Serve</a></li>
+      <li><a href="../index.html#founder">About</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+    </ul>
+    <a href="https://api.leadconnectorhq.com/widget/bookings/pure-compass-scheduling" target="_blank" rel="noopener" class="nav-cta">Book a Strategy Call</a>
+  </nav>
+
+
+  <section class="post-hero">
+    <div class="post-hero-inner">
+      <span class="post-category-tag">Capital Access & Lending</span>
+      <h1>What Is a DSCR Loan, and Why Investors Use It</h1>
+      <p class="post-meta">By Nikki Cates, Founder &mdash; Pure Compass Investments &nbsp;|&nbsp; 2026</p>
+    </div>
+  </section>
+
+  <section class="post-body">
+    <div class="post-body-inner">
+
+      <p>Conventional mortgages qualify you based on your personal income: W-2s, tax returns, debt-to-income ratio. That works fine until it doesn't, which is most often the case for self-employed investors, people who write off heavily on their taxes, or anyone who already owns a few properties and is starting to look "over-leveraged" on paper even though the properties cash flow just fine.</p>
+      <p>A DSCR loan, short for Debt Service Coverage Ratio loan, qualifies you on the property instead of you personally. The lender looks at whether the property's rental income covers its debt obligations, the mortgage payment, taxes, and insurance, at an acceptable ratio. Your personal tax returns largely stay out of the conversation.</p>
+      <p>That single shift changes who can actually buy. An investor with strong rental income but a tax return that shows very little personal income, common among real estate investors who maximize legitimate deductions, can often qualify for a DSCR loan when they'd be declined for a conventional one.</p>
+      <p>A few things worth knowing before you go looking for one. DSCR loans are typically used for investment property, not primary residences. Down payment requirements tend to run higher than a conventional loan, and rates are usually somewhat higher to reflect that the lender is taking on cash-flow-based risk instead of income-based risk. The ratio itself matters: a property that comfortably covers its debt service gets better terms than one that barely breaks even.</p>
+      <p>This is also where having the right lender matters more than people expect. Not every lender offers DSCR products, and the ones that do vary widely on minimum ratios, reserve requirements, and how they treat properties held in an LLC. A lender who specializes in investor files, rather than a generalist loan officer handling DSCR as a side product, tends to move faster and catch fewer surprises at underwriting.</p>
+      <p>None of this replaces a conversation with a licensed loan officer who can run your actual numbers. What it should do is help you walk into that conversation knowing the right questions to ask.</p>
+
+
+    <div class="post-cta">
+      <p class="cta-label">Find out where you actually stand.</p>
+      <p>Take the free <strong>Pure Compass Readiness Quiz</strong> to see which pillar fits where you are right now.</p>
+      <a href="mailto:deals@purecompassinvest.com?subject=Readiness%20Quiz" class="btn-cream">Take the Quiz</a>
+    </div>
+
+    </div>
+  </section>
+
+  <div class="post-nav">
+    <div class="post-nav-inner">
+      <a href="index.html">&larr; Back to Blog</a>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/pure-compass-scheduling" target="_blank" rel="noopener">Book a Strategy Call &rarr;</a>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="../logo-transparent.png" alt="Pure Compass Investments" style="height:48px;width:auto;filter:brightness(1.6) contrast(0.9);" />
+        <p class="footer-tagline">Clarity Before Capital.<br />Orientation Before Movement.<br />Where Legacy Meets Direction.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:deals@purecompassinvest.com">deals@purecompassinvest.com</a>
+        <a href="tel:4076934449">407-693-4449</a>
+        <p>Central Florida &amp; Georgia</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="../index.html#framework">True North Framework</a>
+        <a href="../index.html#ecosystem">The Ecosystem</a>
+        <a href="../index.html#serve">Who We Serve</a>
+        <a href="../index.html#founder">About Nikki</a>
+        <a href="index.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://linkedin.com/in/nikkicates" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://claritybeforecapital.beehiiv.com" target="_blank" rel="noopener">Newsletter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pure Compass Investments. All rights reserved.</p>
+      <p>Education and decision support only. Not investment, legal, or financial advice. Real estate transactions executed through licensed brokerage partnership.</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
