@@ -122,11 +122,11 @@
     .btn-ghost {
       display: inline-block; font-family: var(--sans); font-size: 0.72rem;
       font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--charcoal); background: transparent;
-      padding: 0.9rem 2rem; border: 1px solid rgba(26,26,26,0.35);
-      transition: border-color 0.25s, color 0.25s;
+      color: var(--cream); background: transparent;
+      padding: 0.9rem 2rem; border: 1px solid rgba(247,244,235,0.6);
+      transition: border-color 0.25s, color 0.25s, background 0.25s;
     }
-    .btn-ghost:hover { border-color: var(--green); color: var(--green); }
+    .btn-ghost:hover { border-color: var(--cream); background: rgba(247,244,235,0.15); color: var(--cream); }
 
     @media (max-width: 960px) {
       .nav-links { display: none; }
@@ -144,10 +144,22 @@
     /* BLOG HERO */
     .blog-hero {
       background: var(--green);
+      background-image: url('../pcicompass.png');
+      background-size: cover;
+      background-position: center 40%;
+      background-blend-mode: multiply;
+      opacity-blend: 0.75;
       padding: 10rem 2.5rem 6rem;
       text-align: center;
+      position: relative;
     }
-    .blog-hero-inner { max-width: 760px; margin: 0 auto; }
+    .blog-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(14, 59, 40, 0.25);
+      pointer-events: none;
+    }
+    .blog-hero-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
     .blog-hero h1 {
       font-family: var(--serif);
       font-size: clamp(2.4rem, 5vw, 4rem);
