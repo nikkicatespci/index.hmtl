@@ -185,6 +185,12 @@
     .pillar-nav-inner a:hover {
       background: var(--green); color: var(--cream); border-color: var(--green);
     }
+    .pillar-nav-inner a.diaspora-link {
+      border-color: var(--green); color: var(--green);
+    }
+    .pillar-nav-inner a.diaspora-link:hover {
+      background: var(--green); color: var(--cream);
+    }
 
     /* CATEGORY SECTION */
     .category-section {
@@ -193,9 +199,7 @@
     }
     .category-section:nth-child(even) { background: var(--cream); }
     .category-section:nth-child(odd) { background: var(--white); }
-    .category-header {
-      margin-bottom: 3.5rem;
-    }
+    .category-header { margin-bottom: 3.5rem; }
     .pillar-badge {
       display: inline-block;
       font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
@@ -213,6 +217,25 @@
       max-width: 680px;
     }
 
+    /* SUB-SECTION (diaspora) */
+    .sub-section {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 2px solid var(--green);
+    }
+    .sub-section-header { margin-bottom: 2.5rem; }
+    .sub-section-label {
+      display: inline-block;
+      font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--white); background: var(--green-mid);
+      padding: 0.35rem 1rem; margin-bottom: 0.85rem;
+    }
+    .sub-section-desc {
+      font-size: 0.9rem; color: var(--charcoal); line-height: 1.8;
+      max-width: 640px;
+    }
+
     /* POSTS GRID */
     .posts-grid {
       display: grid;
@@ -227,13 +250,18 @@
     .category-section:nth-child(even) .post-card { background: var(--white); }
     .post-card:hover { box-shadow: 0 4px 24px rgba(14,59,40,0.1); }
     .post-card a {
-      display: block; padding: 2rem 1.75rem; height: 100%;
       display: flex; flex-direction: column;
+      padding: 2rem 1.75rem; height: 100%;
     }
     .post-card-cat {
       font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
       letter-spacing: 0.24em; text-transform: uppercase; color: var(--silver);
-      margin-bottom: 0.85rem; display: block;
+      margin-bottom: 0.4rem; display: block;
+    }
+    .post-card-sub {
+      font-family: var(--sans); font-size: 0.58rem; font-weight: 400;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--green); display: block; margin-bottom: 0.75rem;
     }
     .post-card h3 {
       font-family: var(--serif); font-size: 1.25rem; font-weight: 400;
@@ -311,6 +339,7 @@
       <a href="#capital-access">Capital Access</a>
       <a href="#real-estate-representation">Real Estate</a>
       <a href="#rei-advisory">REI Advisory</a>
+      <a href="#diaspora-cross-border" class="diaspora-link">Diaspora &amp; Cross-Border</a>
       <a href="#legacy-wealth-protection">Legacy &amp; Wealth</a>
     </div>
   </nav>
@@ -328,8 +357,9 @@
         <article class="post-card">
           <a href="12-documents-to-review-before-you-sign.html">
             <span class="post-card-cat">Legal Protection</span>
+            
             <h3>12 Documents to Review Before You Sign</h3>
-            <p>Most legal damage happens before anyone signs anything wrong. Here are the 12 documents worth having reviewed first, and why it matters more than you think.</p>
+            <p>Most legal damage happens before anyone signs anything wrong. Here are the 12 documents worth having reviewed first.</p>
             <span class="post-card-link">Read Article &rarr;</span>
           </a>
         </article>
@@ -337,8 +367,9 @@
         <article class="post-card">
           <a href="what-to-know-before-signing-a-quitclaim-deed.html">
             <span class="post-card-cat">Legal Protection</span>
+            
             <h3>What to Know Before Signing a Quitclaim Deed</h3>
-            <p>A quitclaim deed transfers what you have, not a guarantee of clear title. Here's what it actually does, and doesn't do, before you sign one.</p>
+            <p>A quitclaim deed transfers what you have, not a guarantee of clear title. Here's what it actually does, and doesn't do.</p>
             <span class="post-card-link">Read Article &rarr;</span>
           </a>
         </article>
@@ -346,6 +377,7 @@
         <article class="post-card">
           <a href="inherited-property-with-siblings-what-to-ask.html">
             <span class="post-card-cat">Legal Protection</span>
+            
             <h3>Inherited Property With Siblings: What to Ask Before You Agree</h3>
             <p>Inheriting property with siblings comes with more legal exposure than most families realize. Here's what to ask before you agree to anything.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -355,6 +387,7 @@
         <article class="post-card">
           <a href="why-your-lease-should-be-reviewed-before-you-use-it.html">
             <span class="post-card-cat">Legal Protection</span>
+            
             <h3>Why Your Lease Should Be Reviewed Before You Use It</h3>
             <p>A free lease template isn't the same as a legally sound one. Here's what landlords miss when they skip the review.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -364,6 +397,7 @@
         <article class="post-card">
           <a href="contractor-agreements-what-property-owners-should-watch-for.html">
             <span class="post-card-cat">Legal Protection</span>
+            
             <h3>Contractor Agreements: What Property Owners Should Watch For</h3>
             <p>Most contractor disputes trace back to the agreement, not the work. Here's what to check before you sign one.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -373,6 +407,7 @@
         <article class="post-card">
           <a href="your-llc-may-not-be-protecting-you.html">
             <span class="post-card-cat">Legal Protection</span>
+            
             <h3>Your LLC May Not Be Protecting You the Way You Think</h3>
             <p>Forming an LLC isn't the same as operating one correctly. Here's where the protection quietly breaks down.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -382,6 +417,7 @@
         <article class="post-card">
           <a href="legal-access-for-first-generation-wealth-builders.html">
             <span class="post-card-cat">Legal Protection</span>
+            
             <h3>Legal Access for First-Generation Wealth Builders</h3>
             <p>Legal protection has historically been gatekept by cost. Here's why access, not income, should determine who gets protected.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -391,6 +427,7 @@
         <article class="post-card">
           <a href="before-you-accept-a-real-estate-investor-offer.html">
             <span class="post-card-cat">Legal Protection</span>
+            
             <h3>Before You Accept a Real Estate Investor Offer</h3>
             <p>Cash offers on inherited or distressed property aren't always what they look like. Here's what to check before you sign.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -413,6 +450,7 @@
         <article class="post-card">
           <a href="what-is-a-dscr-loan.html">
             <span class="post-card-cat">Capital Access & Lending</span>
+            
             <h3>What Is a DSCR Loan, and Why Investors Use It</h3>
             <p>DSCR loans qualify you on the property's cash flow, not your personal income. Here's how they work and who they actually fit.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -422,6 +460,7 @@
         <article class="post-card">
           <a href="foreign-national-itin-loan-denied.html">
             <span class="post-card-cat">Capital Access & Lending</span>
+            
             <h3>Why Foreign Nationals and ITIN Holders Get Denied for Loans, and What Actually Works</h3>
             <p>Conventional lenders weren't built for foreign national or ITIN borrowers. Here's why, and what actually works instead.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -431,6 +470,7 @@
         <article class="post-card">
           <a href="hard-money-loans-explained.html">
             <span class="post-card-cat">Capital Access & Lending</span>
+            
             <h3>Hard Money 101: When a Bridge Loan Makes Sense (and When It Doesn't)</h3>
             <p>Hard money isn't a last resort, it's a speed tool. Here's when it actually makes sense, and when it doesn't.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -440,8 +480,9 @@
         <article class="post-card">
           <a href="llc-property-financing-challenges.html">
             <span class="post-card-cat">Capital Access & Lending</span>
+            
             <h3>Why Holding Property in an LLC Can Make Lending Harder, Unless You Do This</h3>
-            <p>Holding property in an LLC protects you legally, but it can complicate financing if you don't plan for it. Here's what to know.</p>
+            <p>Holding property in an LLC protects you legally, but it can complicate financing if you don't plan for it.</p>
             <span class="post-card-link">Read Article &rarr;</span>
           </a>
         </article>
@@ -449,6 +490,7 @@
         <article class="post-card">
           <a href="credit-gatekeeping-first-generation-investors.html">
             <span class="post-card-cat">Capital Access & Lending</span>
+            
             <h3>The Credit Gatekeeping Nobody Warns First-Generation Investors About</h3>
             <p>Conventional lending wasn't built with first-generation investors in mind. Here's the history behind that, and what's actually changing it.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -471,6 +513,7 @@
         <article class="post-card">
           <a href="probate-real-estate-sale-explained.html">
             <span class="post-card-cat">Real Estate Representation</span>
+            
             <h3>What Makes a Probate Real Estate Sale Different, and Why It Needs a Specialist</h3>
             <p>Probate sales aren't standard listings. Here's what's genuinely different, and why a specialist matters.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -480,6 +523,7 @@
         <article class="post-card">
           <a href="investor-focused-real-estate-agent.html">
             <span class="post-card-cat">Real Estate Representation</span>
+            
             <h3>What an Investor-Focused Agent Actually Does Differently</h3>
             <p>Most agents can show you a house. An investor-focused agent runs the numbers with you first. Here's the actual difference.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -489,6 +533,7 @@
         <article class="post-card">
           <a href="foreign-national-buying-us-real-estate.html">
             <span class="post-card-cat">Real Estate Representation</span>
+            
             <h3>What Foreign National Buyers Need to Know Before Purchasing U.S. Real Estate</h3>
             <p>Buying U.S. property as a non-resident comes with steps most agents won't think to mention. Here's what to ask about first.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -498,8 +543,9 @@
         <article class="post-card">
           <a href="selling-inherited-house-multiple-heirs.html">
             <span class="post-card-cat">Real Estate Representation</span>
+            
             <h3>Selling an Inherited House With Multiple Heirs: How a Probate-Literate Agent Helps</h3>
-            <p>Selling inherited property with siblings or co-heirs comes with logistics most listing agents have never had to coordinate. Here's how a probate-literate agent helps.</p>
+            <p>Selling inherited property with siblings or co-heirs comes with logistics most listing agents have never had to coordinate.</p>
             <span class="post-card-link">Read Article &rarr;</span>
           </a>
         </article>
@@ -507,8 +553,9 @@
         <article class="post-card">
           <a href="first-generation-sellers-strategy.html">
             <span class="post-card-cat">Real Estate Representation</span>
+            
             <h3>Why 'Just List It' Isn't a Strategy for First-Generation Sellers</h3>
-            <p>A fast listing isn't always the right move for a family selling their first major asset. Here's what gets missed, and why it matters.</p>
+            <p>A fast listing isn't always the right move for a family selling their first major asset. Here's what gets missed.</p>
             <span class="post-card-link">Read Article &rarr;</span>
           </a>
         </article>
@@ -522,13 +569,14 @@
       <div class="category-header">
         <span class="pillar-badge">Pillar 04</span>
         <h2>Investment Strategy & Advisory</h2>
-        <p class="cat-desc">Deal evaluation, strategy selection, and advisory built for investors at every stage, including those who aren't loan-ready yet.</p>
+        <p class="cat-desc">Deal evaluation, strategy selection, and advisory built for investors at every stage, including those who aren't loan-ready yet. Includes a dedicated lane for diaspora and cross-border investors building wealth across two countries.</p>
       </div>
       <div class="posts-grid">
 
         <article class="post-card">
           <a href="investment-advice-under-500k.html">
             <span class="post-card-cat">Investment Strategy & Advisory</span>
+            
             <h3>You Don't Need $500,000 to Get Real Investment Advice</h3>
             <p>Most wealth managers won't take an account under $500,000. Here's why that gap exists, and what to do instead.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -538,6 +586,7 @@
         <article class="post-card">
           <a href="buy-and-hold-vs-brrrr-vs-str.html">
             <span class="post-card-cat">Investment Strategy & Advisory</span>
+            
             <h3>Buy and Hold, BRRRR, or Short-Term Rental: Which Strategy Actually Fits Your Goals</h3>
             <p>Each real estate strategy asks something different of your time, capital, and risk tolerance. Here's how to tell which one actually fits.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -547,6 +596,7 @@
         <article class="post-card">
           <a href="evaluate-real-estate-deal-no-finance-background.html">
             <span class="post-card-cat">Investment Strategy & Advisory</span>
+            
             <h3>How to Evaluate a Real Estate Deal Without a Financial Background</h3>
             <p>You don't need a finance degree to evaluate a deal. You need a short list of the right questions. Here's the framework.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -556,6 +606,7 @@
         <article class="post-card">
           <a href="credit-adjacent-before-loan-ready.html">
             <span class="post-card-cat">Investment Strategy & Advisory</span>
+            
             <h3>Credit-Adjacent? Here's What to Do Before You're Loan Ready</h3>
             <p>Not loan-ready yet doesn't mean not investable yet. Here's what to actually do with the time before you qualify.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -565,12 +616,62 @@
         <article class="post-card">
           <a href="deal-review-investors-skip.html">
             <span class="post-card-cat">Investment Strategy & Advisory</span>
+            
             <h3>The Deal Review Most Investors Skip, and Regret</h3>
-            <p>An independent second opinion before you commit costs little compared to what skipping it can cost. Here's why investors skip it anyway.</p>
+            <p>An independent second opinion before you commit costs little compared to what skipping it can cost.</p>
             <span class="post-card-link">Read Article &rarr;</span>
           </a>
         </article>
 
+      </div>
+      <div class="sub-section" id="diaspora-cross-border">
+        <div class="sub-section-header">
+          <span class="sub-section-label">Diaspora &amp; Cross-Border Strategy</span>
+          <p class="sub-section-desc">Advisory resources built specifically for investors managing wealth across two countries, navigating cross-border property decisions, and building financial plans that account for the full complexity of diaspora life.</p>
+        </div>
+        <div class="posts-grid">
+
+        <article class="post-card">
+          <a href="building-wealth-in-two-countries.html">
+            <span class="post-card-cat">Investment Strategy & Advisory</span>
+            <span class="post-card-sub">Diaspora & Cross-Border Strategy</span>
+            <h3>Building Wealth in Two Countries: What Diaspora Investors Should Map Out First</h3>
+            <p>Buying property abroad and building wealth in the US aren't the same project. Here's what to map out before either one.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="cross-border-real-estate-mistakes-planning-phase.html">
+            <span class="post-card-cat">Investment Strategy & Advisory</span>
+            <span class="post-card-sub">Diaspora & Cross-Border Strategy</span>
+            <h3>Why Most Cross-Border Real Estate Mistakes Happen Before the Trip, Not During It</h3>
+            <p>The costliest cross-border property mistakes usually happen in the planning phase, not on the ground.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="diaspora-wealth-building-tension.html">
+            <span class="post-card-cat">Investment Strategy & Advisory</span>
+            <span class="post-card-sub">Diaspora & Cross-Border Strategy</span>
+            <h3>The Diaspora Wealth-Building Tension Nobody Talks About</h3>
+            <p>Most financial advice assumes one household, one country, one set of obligations. Diaspora wealth-building rarely works that way.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="what-international-strategy-means-at-pure-compass.html">
+            <span class="post-card-cat">Investment Strategy & Advisory</span>
+            <span class="post-card-sub">Diaspora & Cross-Border Strategy</span>
+            <h3>What "International Strategy" Actually Means at Pure Compass (and What It Doesn't)</h3>
+            <p>Here's exactly what Pure Compass does, and doesn't do, for diaspora and cross-border investors, stated plainly.</p>
+            <span class="post-card-link">Read Article &rarr;</span>
+          </a>
+        </article>
+
+        </div>
       </div>
     </div>
   </section>
@@ -587,6 +688,7 @@
         <article class="post-card">
           <a href="landlord-insurance-vs-homeowners-policy.html">
             <span class="post-card-cat">Legacy & Wealth Protection</span>
+            
             <h3>Why Landlord Insurance Isn't the Same as a Homeowner's Policy (And the Gap That Costs Investors)</h3>
             <p>A standard homeowner's policy often doesn't cover a rental. Here's the gap that catches new landlords off guard.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -596,6 +698,7 @@
         <article class="post-card">
           <a href="life-insurance-as-legacy-plan.html">
             <span class="post-card-cat">Legacy & Wealth Protection</span>
+            
             <h3>Life Insurance Isn't Just a Payout. It's a Legacy Plan, If You Use It That Way.</h3>
             <p>A death benefit without a plan often disappears within a few years. Here's how to think about life insurance as a legacy tool instead.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -605,6 +708,7 @@
         <article class="post-card">
           <a href="property-insurance-when-you-inherit-a-house.html">
             <span class="post-card-cat">Legacy & Wealth Protection</span>
+            
             <h3>What Happens to Your Property Insurance When You Inherit a House</h3>
             <p>Inherited property insurance doesn't just continue automatically. Here's what actually happens, and what to check first.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -614,6 +718,7 @@
         <article class="post-card">
           <a href="questions-before-buying-insurance.html">
             <span class="post-card-cat">Legacy & Wealth Protection</span>
+            
             <h3>What to Ask Before You Buy Insurance You Don't Fully Understand</h3>
             <p>Insurance is one of the most signed-without-reading documents there is. Here's what to actually ask before you buy any policy.</p>
             <span class="post-card-link">Read Article &rarr;</span>
@@ -623,6 +728,7 @@
         <article class="post-card">
           <a href="protecting-what-you-built-insurance-and-legal-access.html">
             <span class="post-card-cat">Legacy & Wealth Protection</span>
+            
             <h3>Protecting What You Built: Why Investors Need Insurance and Legal Access, Not Just One or the Other</h3>
             <p>Insurance and legal protection solve different problems. Most people only have one in place. Here's why you need both.</p>
             <span class="post-card-link">Read Article &rarr;</span>
