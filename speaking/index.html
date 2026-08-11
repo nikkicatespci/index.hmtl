@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speaking | Pure Compass Investments</title>
+  <meta name="description" content="Nikki Cates, founder of Pure Compass Investments, speaks on capital, culture, and generational wealth for community groups, brokerages, and organizations serving first-generation and diaspora investors." />
+
+  <!-- Google Fonts: Cormorant Garamond + Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+
+    :root {
+      --green:        #0e3b28;
+      --green-mid:    #174d35;
+      --green-light:  #1e6040;
+      --silver:       #a6a7a5;
+      --silver-light: #c8c9c7;
+      --cream:        #f7f4eb;
+      --cream-dark:   #ede9dc;
+      --charcoal:     #1a1a1a;
+      --white:        #ffffff;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans:  'Jost', 'Helvetica Neue', sans-serif;
+      --max-w: 1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      color: var(--charcoal);
+      background: var(--white);
+      line-height: 1.75;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+
+    /* ─── NAV ────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(14, 59, 40, 0.97);
+      backdrop-filter: blur(10px);
+      padding: 1.1rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.9rem; }
+    .nav-logo img { height: 64px; width: auto; filter: brightness(1.6) contrast(0.9); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 400;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--silver-light);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--cream); }
+    .nav-cta {
+      font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--green); background: var(--cream);
+      padding: 0.55rem 1.5rem; border: 1px solid var(--cream);
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-cta:hover { background: transparent; color: var(--cream); }
+
+    /* ─── SPEAKING HERO ──────────────────────────────────────── */
+    .speaking-hero {
+      background: var(--green);
+      background-image: url('../pcicompass.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-blend-mode: multiply;
+      padding: 10rem 2.5rem 6rem;
+      text-align: center;
+      position: relative;
+    }
+    .speaking-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(14, 59, 40, 0.25);
+      pointer-events: none;
+    }
+    .speaking-hero-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+    .speaking-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 300; color: var(--cream); line-height: 1.12;
+      margin-bottom: 1.25rem;
+    }
+    .speaking-hero-sub {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.8vw, 1.3rem);
+      font-style: italic;
+      color: var(--silver-light);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .speaking-hero-note {
+      margin-top: 2.5rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(168,169,165,0.25);
+    }
+    .speaking-hero-note p {
+      font-size: 0.85rem;
+      color: var(--silver-light);
+      line-height: 1.8;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ─── SPEAKER BIO ────────────────────────────────────────── */
+    #speaker-bio {
+      background: var(--cream);
+      padding: 7rem 2.5rem;
+    }
+    .speaker-bio-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 6rem;
+      align-items: start;
+    }
+    .speaker-photo-col { position: relative; }
+    .speaker-photo-col img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .speaker-photo-badge {
+      position: absolute;
+      bottom: -1rem; right: -1rem;
+      width: 100px;
+      overflow: hidden;
+    }
+    .speaker-photo-badge img { width: 100%; }
+    .speaker-content { padding-top: 0.5rem; }
+    .speaker-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 400; color: var(--green);
+      margin-bottom: 1.5rem;
+    }
+    .speaker-content p {
+      font-size: 0.95rem; color: var(--charcoal);
+      line-height: 1.9; margin-bottom: 1.25rem;
+    }
+    .credential-list {
+      list-style: none;
+      margin-top: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+    .credential-list li {
+      position: relative;
+      padding-left: 1.35rem;
+      font-size: 0.88rem;
+      color: var(--charcoal);
+      line-height: 1.7;
+    }
+    .credential-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0.55em;
+      width: 6px; height: 6px;
+      background: var(--green);
+    }
+
+    /* ─── WHAT THE TALK COVERS ───────────────────────────────── */
+    #talk-covers {
+      background: var(--white);
+      padding: 7rem 2.5rem;
+    }
+    .talk-covers-inner { max-width: var(--max-w); margin: 0 auto; }
+    .talk-covers-header { text-align: center; max-width: 680px; margin: 0 auto 4.5rem; }
+    .talk-covers-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 400; color: var(--green);
+      margin-bottom: 1.25rem;
+    }
+    .talk-covers-header p {
+      font-size: 0.95rem; color: var(--charcoal); line-height: 1.9;
+    }
+    .talk-points-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+    .pillar { display: flex; gap: 1.25rem; align-items: flex-start; }
+    .pillar-icon {
+      width: 38px; height: 38px; min-width: 38px;
+      border: 1px solid var(--green);
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 0.1rem;
+    }
+    .pillar-icon svg { width: 16px; height: 16px; stroke: var(--green); fill: none; stroke-width: 1.5; }
+    .pillar-text h4 {
+      font-family: var(--serif); font-size: 1.1rem; font-weight: 500;
+      color: var(--green); margin-bottom: 0.3rem;
+    }
+    .pillar-text p { font-size: 0.88rem; color: var(--charcoal); line-height: 1.75; }
+
+    /* ─── FORMATS ────────────────────────────────────────────── */
+    #formats {
+      background: var(--green);
+      padding: 7rem 2.5rem;
+    }
+    .formats-inner { max-width: var(--max-w); margin: 0 auto; }
+    .formats-header { text-align: center; margin-bottom: 4.5rem; }
+    .formats-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300; color: var(--cream);
+      margin-bottom: 1.25rem;
+    }
+    .formats-header p {
+      font-size: 0.95rem; color: var(--silver-light);
+      max-width: 560px; margin: 0 auto; line-height: 1.85;
+    }
+    .formats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+    }
+    .content-card {
+      background: var(--green-mid);
+      padding: 3rem 2.5rem;
+    }
+    .content-card .content-type {
+      font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.3em; text-transform: uppercase; color: var(--silver);
+      margin-bottom: 1.25rem; display: block;
+    }
+    .content-card h3 {
+      font-family: var(--serif); font-size: 1.45rem; font-weight: 400;
+      color: var(--cream); margin-bottom: 1rem; line-height: 1.2;
+    }
+    .content-card p {
+      font-size: 0.88rem; color: var(--silver-light); line-height: 1.85;
+    }
+
+    /* ─── BOOKING CTA ────────────────────────────────────────── */
+    #book {
+      background: var(--charcoal);
+      padding: 7rem 2.5rem;
+      text-align: center;
+    }
+    .book-inner { max-width: 640px; margin: 0 auto; }
+    .book-inner .section-label { text-align: center; }
+    .book-inner h2 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 300; color: var(--cream);
+      margin-bottom: 1.25rem; line-height: 1.2;
+    }
+    .book-inner > p {
+      font-size: 0.95rem; color: var(--silver-light);
+      line-height: 1.85; margin-bottom: 3rem;
+    }
+    .speaking-form-card {
+      background: var(--cream);
+      padding: 3rem 2.5rem;
+      text-align: left;
+    }
+    .form-row { margin-bottom: 1.5rem; }
+    .form-row:last-of-type { margin-bottom: 2rem; }
+    .form-row label {
+      font-family: var(--sans); font-size: 0.66rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--green);
+      display: block; margin-bottom: 0.5rem;
+    }
+    .form-row input, .form-row select {
+      width: 100%;
+      font-family: var(--sans); font-size: 0.9rem; font-weight: 300;
+      color: var(--charcoal); background: var(--white);
+      border: 1px solid var(--cream-dark);
+      padding: 0.8rem 0.95rem;
+    }
+    .form-row input:focus, .form-row select:focus {
+      outline: none; border-color: var(--green);
+    }
+    .btn-green-solid {
+      display: inline-block;
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--white); background: var(--green);
+      padding: 0.9rem 2rem; border: 1px solid var(--green);
+      transition: background 0.25s, color 0.25s;
+      cursor: pointer;
+    }
+    .btn-green-solid:hover { background: var(--green-mid); }
+    .form-submit-row { text-align: center; }
+
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    footer { background: var(--charcoal); padding: 4rem 2.5rem 2.5rem; }
+    .footer-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3.5rem; align-items: start;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-brand img { height: 50px; width: auto; margin-bottom: 1rem; }
+    .footer-tagline { font-family: var(--serif); font-size: 0.9rem; font-style: italic; color: var(--silver); line-height: 1.7; }
+    .footer-col h4 {
+      font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.28em; text-transform: uppercase; color: var(--silver); margin-bottom: 1.25rem;
+    }
+    .footer-col a, .footer-col p {
+      font-size: 0.85rem; color: rgba(255,255,255,0.55);
+      display: block; line-height: 2; transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--cream); }
+    .footer-bottom {
+      max-width: var(--max-w); margin: 2rem auto 0;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.3); line-height: 1.6; }
+
+    @media (max-width: 960px) {
+      .speaker-bio-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .talk-points-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .formats-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .nav-links { display: none; }
+      #speaker-bio, #talk-covers, #formats, #book { padding: 5rem 1.5rem; }
+      .speaking-hero { padding: 8rem 1.5rem 4rem; }
+      nav { padding: 1rem 1.25rem; }
+      .nav-logo img { height: 32px; }
+      .nav-cta { padding: 0.5rem 1rem; font-size: 0.65rem; }
+      .speaker-photo-badge { width: 80px; bottom: -0.75rem; right: -0.75rem; }
+    }
+    @media (max-width: 600px) {
+      .footer-inner { grid-template-columns: 1fr; }
+      .speaking-form-card { padding: 2.5rem 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAV ─────────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-logo">
+      <a href="../index.html">
+        <img src="../logo-transparent.png" alt="Pure Compass Investments" style="height:80px;width:auto;filter:brightness(1.6) contrast(0.9);" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html#gap">Our Approach</a></li>
+      <li><a href="../index.html#framework">True North</a></li>
+      <li><a href="../index.html#ecosystem">The Ecosystem</a></li>
+      <li><a href="../index.html#serve">Who We Serve</a></li>
+      <li><a href="../index.html#founder">About</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="index.html" class="active">Speaking</a></li>
+    </ul>
+    <a href="https://api.leadconnectorhq.com/widget/bookings/pure-compass-scheduling" target="_blank" rel="noopener" class="nav-cta">Book a Strategy Call</a>
+  </nav>
+
+  <!-- ─── HERO ────────────────────────────────────────────────── -->
+  <section class="speaking-hero">
+    <div class="speaking-hero-inner">
+      <span class="section-label" style="text-align:center;">Speaking</span>
+      <h1>Bringing Clarity to the Room</h1>
+      <p class="speaking-hero-sub">Nikki Cates speaks on capital, culture, and the decisions that shape generational wealth.</p>
+      <div class="speaking-hero-note">
+        <p>Available for community events, business associations, brokerages, and organizations serving first-generation and diaspora communities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SPEAKER BIO ─────────────────────────────────────────── -->
+  <section id="speaker-bio">
+    <div class="speaker-bio-inner">
+      <div class="speaker-photo-col">
+        <img src="../NikkiCM RE.jpg" alt="Nikki Cates, Founder and CEO of Pure Compass Investments" />
+        <div class="speaker-photo-badge">
+          <img src="../updated pure compass the ONE.png" alt="Pure Compass Investments" />
+        </div>
+      </div>
+      <div class="speaker-content">
+        <span class="section-label">About the Speaker</span>
+        <h2>Nikki Cates</h2>
+        <p>Nikki Cates brings real estate, lending, and advisory experience into every room she enters, grounded in the same structural discipline that defines Pure Compass Investments. Her years inside the industry, on the lending side and the advisory side alike, showed her how rarely capital decisions are made with real clarity, and how much that costs families over time.</p>
+        <p>She speaks from the intersection of finance, culture, and conviction, translating the thinking behind the True North Framework into a conversation that gives a room something to actually use.</p>
+        <ul class="credential-list">
+          <li>Real estate and lending experience in the Washington, D.C. and Maryland market, 2017&ndash;2021</li>
+          <li>Active Florida real estate license, operating through eXp Realty's Referral Division</li>
+          <li>Graduate theological training at Emory University's Candler School of Theology</li>
+          <li>Founder of Pure Compass Investments, built on the True North Framework</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WHAT THE TALK COVERS ────────────────────────────────── -->
+  <section id="talk-covers">
+    <div class="talk-covers-inner">
+      <div class="talk-covers-header">
+        <span class="section-label" style="text-align:center;">What the Talk Covers</span>
+        <h2>Clarity Over Complexity</h2>
+        <p>Every talk is shaped to the room, but each one draws from the same core material.</p>
+      </div>
+      <div class="talk-points-grid">
+        <div class="pillar">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          </div>
+          <div class="pillar-text">
+            <h4>Capital and Conscience</h4>
+            <p>Why capital and conscience are not in tension, and what that means for how families build wealth.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="pillar-text">
+            <h4>The Weight in the Room</h4>
+            <p>The structural and cultural history that shapes how first-generation and diaspora clients experience real estate and financial decisions.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="pillar-text">
+            <h4>Something to Leave With</h4>
+            <p>Practical takeaways for anyone in the room, whether they're building their own wealth or advising someone who is.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FORMATS ─────────────────────────────────────────────── -->
+  <section id="formats">
+    <div class="formats-inner">
+      <div class="formats-header">
+        <span class="section-label" style="text-align:center;">Ways to Book Nikki</span>
+        <h2>Formats Available</h2>
+        <p>Every engagement is shaped to the room, from a short community talk to a full keynote.</p>
+      </div>
+      <div class="formats-grid">
+        <div class="content-card">
+          <span class="content-type">Community Talk</span>
+          <h3>Free &middot; 20&ndash;30 Minutes</h3>
+          <p>Suited to local business groups, associations, and community organizations looking to open a conversation on capital and legacy.</p>
+        </div>
+        <div class="content-card">
+          <span class="content-type">Keynote</span>
+          <h3>Paid &middot; 45&ndash;60 Minutes</h3>
+          <p>Suited to conferences and larger organizational events that want a fuller treatment of the material and room for discussion.</p>
+        </div>
+        <div class="content-card">
+          <span class="content-type">Go Deeper</span>
+          <h3>Reading the Room</h3>
+          <p>For organizations that want to go further after a talk, Nikki can connect you to Reading the Room, the full continuing education course for real estate professionals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BOOKING CTA ─────────────────────────────────────────── -->
+  <section id="book">
+    <div class="book-inner">
+      <span class="section-label">Get in Touch</span>
+      <h2>Inquire About Booking Nikki</h2>
+      <p>Share a few details about your event and Nikki will follow up to talk through fit, format, and availability.</p>
+      <!--
+        TODO (follow-up task, not part of this page build): this form has no
+        submission handler yet. Wire it to a GoHighLevel form/workflow so
+        speaking inquiries route to the team instead of just reloading the page.
+      -->
+      <div class="speaking-form-card">
+        <form>
+          <div class="form-row">
+            <label for="speaking-name">Name</label>
+            <input type="text" id="speaking-name" name="name" required />
+          </div>
+          <div class="form-row">
+            <label for="speaking-email">Email</label>
+            <input type="email" id="speaking-email" name="email" required />
+          </div>
+          <div class="form-row">
+            <label for="speaking-org">Organization</label>
+            <input type="text" id="speaking-org" name="organization" required />
+          </div>
+          <div class="form-row">
+            <label for="speaking-event-type">Event Type</label>
+            <select id="speaking-event-type" name="event_type">
+              <option value="community-talk">Community Talk</option>
+              <option value="keynote">Keynote</option>
+              <option value="reading-the-room">Reading the Room</option>
+              <option value="not-sure">Not Sure Yet</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="speaking-event-date">Event Date</label>
+            <input type="date" id="speaking-event-date" name="event_date" />
+          </div>
+          <div class="form-submit-row">
+            <button type="submit" class="btn-green-solid">Send Inquiry</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ──────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="../logo-transparent.png" alt="Pure Compass Investments" style="height:48px;width:auto;filter:brightness(1.6) contrast(0.9);" />
+        <p class="footer-tagline">Clarity Before Capital.<br />Orientation Before Movement.<br />Where Legacy Meets Direction.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:deals@purecompassinvest.com">deals@purecompassinvest.com</a>
+        <a href="tel:4076934449">407-693-4449</a>
+        <p>Central Florida &amp; Georgia</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="../index.html#framework">True North Framework</a>
+        <a href="../index.html#ecosystem">The Ecosystem</a>
+        <a href="../index.html#serve">Who We Serve</a>
+        <a href="../index.html#founder">About Nikki</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="index.html">Speaking</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://linkedin.com/in/nikkicates" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://claritybeforecapital.beehiiv.com" target="_blank" rel="noopener">Newsletter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pure Compass Investments. All rights reserved.</p>
+      <p>Education and decision support only. Not investment, legal, or financial advice. Real estate referrals coordinated through Nikki's eXp Realty Referral Division affiliation; transactions are handled by independently licensed representation partners.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
